@@ -1,10 +1,15 @@
 # Velocity Rush 3D
-CSE 402 Computer Graphics & Image Processing Lab - endless procedural scenic driving simulator.
+CSE 4022 Computer Graphics & Image Processing Lab - endless procedural scenic driving simulator.
 C++ / OpenGL / FreeGLUT. Source is split by feature (see "Source layout" below); gameplay is unchanged.
+
+## Play
+**[Click here to download and play Velocity Rush 3D](https://github.com/JakuarOvi/VelocityRush_3D/raw/refs/heads/main/velocityRush3D.exe)**
+
+Windows: download `velocityRush3D.exe`, keep `freeglut.dll` beside it, and run the executable.
 
 ## Build
 **Windows - Code::Blocks (MinGW)**
-1. Install FreeGLUT for MinGW (put `include/GL`, `lib`, and `bin/freeglut.dll` where your compiler finds them).
+1. Install FreeGLUT for MinGW (put `include/GL`, `lib`, and `bin/freeglut.dll` where your compiler finds it).
 2. New Console Project -> add **all** `.cpp` files (and the `.h` files) from this folder.
 3. Project > Build options > Linker settings, add in this order: `freeglut`, `glu32`, `opengl32`, `winmm`, `gdi32`.
 4. Build and run. Keep `freeglut.dll` next to the .exe.
@@ -13,7 +18,7 @@ C++ / OpenGL / FreeGLUT. Source is split by feature (see "Source layout" below);
 1. Install FreeGLUT via vcpkg (`vcpkg install freeglut:x64-windows`) and integrate, or add include/lib paths by hand.
 2. Add all `.cpp` files to an empty C++ project. Link `freeglut.lib`, `glu32.lib`, `opengl32.lib`.
 
-**Linux / macOS:** `make && ./velocity_rush`  (Ubuntu: `sudo apt install freeglut3-dev libglu1-mesa-dev`)
+**Linux / macOS:** `make && ./velocity_rush` (Ubuntu: `sudo apt install freeglut3-dev libglu1-mesa-dev`)
 
 ## Controls
 | Key | Action |
