@@ -77,7 +77,7 @@ Windows: download `velocityRush3D.exe`, keep `freeglut.dll` beside it, and run t
 - Dynamic shadows, reflections, volumetric clouds, traffic and multiplayer are out of scope, as in the proposal (the car has a simple blob shadow).
 - 4x MSAA is requested; if your driver refuses it, delete `GLUT_MULTISAMPLE` from `glutInitDisplayMode` and the `glutSetOption` line.
 
-## v2 changes
+## New changes
 - Sharper, more varied road bends (`road.cpp`)
 - Automatic 5-speed gearbox with engine torque curve, engine braking, shift dips and rev limiter (`simulation.cpp`)
 - Slope effect on speed; speed-sensitive steering (less lock at high speed)
