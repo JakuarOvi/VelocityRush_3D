@@ -29,11 +29,11 @@ V3 carPos, carFwd; float carYawDeg = 0, carPitchDeg = 0;
 GLUquadric* quad = NULL;
 GLuint texDetail = 0, listTrunk, listPine, listRound;
 
+PhysicsTuning physics = { 29.0f, 0.75f, 1.0f, 1.0f, 0.72f, 8.5f, 9.0f, 7.5f, 0.28f, 0.72f, 0.24f, 5.0f, 5.5f, 18.0f, 14.0f };
+float controllerSteer = 0.0f;
 Env env;
 float cloudCur = 0.05f, fogCur = 0.0026f, rainCur = 0;
 const char* wName[3] = { "Sunny", "Foggy", "Rainy" };
-
 V3 rainP[NRAIN];
 V3 starP[NSTAR]; float starB[NSTAR];
-
 void showMsg(const char* m) { strncpy(msg, m, 95); msg[95] = 0; msgTimer = 2.2f; }
