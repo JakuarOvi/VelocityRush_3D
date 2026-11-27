@@ -21,7 +21,7 @@ int main(int argc, char** argv) {
     quad = gluNewQuadric(); gluQuadricNormals(quad, GLU_SMOOTH);
     glEnable(GL_MULTISAMPLE); glEnable(GL_DEPTH_TEST); glShadeModel(GL_SMOOTH);
     glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
-    makeTextures(); buildLists(); loadBest();
+    makeTextures(); buildLists(); loadBest(); loadPhysicsConfig();
     srand(1234);
     for (int i = 0; i < NRAIN; i++) rainP[i] = v3((float)(rand() % 6000) / 100.0f, (float)(rand() % 4000) / 100.0f, (float)(rand() % 6000) / 100.0f);
     for (int i = 0; i < NSTAR; i++) {
@@ -33,6 +33,7 @@ int main(int argc, char** argv) {
     glutDisplayFunc(display); glutReshapeFunc(reshape);
     glutKeyboardFunc(keyDown); glutKeyboardUpFunc(keyUp);
     glutSpecialFunc(specDown); glutSpecialUpFunc(specUp);
+    glutJoystickFunc(joystickFn, 16);
     glutMouseFunc(mouse); glutMotionFunc(motion); glutMouseWheelFunc(wheelFn);
     glutTimerFunc(8, tick, 0);
     atexit(saveBest);
