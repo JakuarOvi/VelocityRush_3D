@@ -1,0 +1,33 @@
+# Velocity Rush 3D vehicle physics tuning
+# Changes take effect after restart
+
+[physics]
+rollingResistance=0.9
+engineBraking=0.6
+brakeDeceleration=32.0
+brakeGripScale=0.75
+aerodynamicDrag=1.0
+slopeResponse=1.0
+grateResponse=0.08
+
+[grip]
+dryLongitudinal=1.0
+wetLongitudinal=0.82
+wetLateral=0.78
+driftSlipAngle=0.19
+driftRecovery=7.0
+lowSpeedDamping=2.8
+collisionRestitution=0.12
+
+[suspension]
+pitchResponse=5.0
+pitchAccelerationScale=0.32
+pitchLimit=1.8
+rollResponse=7.0
+rollLimit=3.2
+
+[steering]
+lowSpeedScale=0.20
+highSpeedScale=0.45
+steeringResponse=9.0
+wheelBaseResponse=0.055
